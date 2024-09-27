@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment, useCallback, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import { createPortal } from 'react-dom'
 import { IoMdClose } from 'react-icons/io'
@@ -29,11 +29,6 @@ export function MapView() {
   const [selectedPosition, setSelectedPosition] = useState<Position | null>(
     null,
   )
-
-  const onLoad = useCallback((map: google.maps.Map) => {
-    const bounds = new window.google.maps.LatLngBounds(center)
-    map.fitBounds(bounds)
-  }, [])
 
   const closeModal = () => {
     setModalIsOpen(false)
@@ -68,10 +63,9 @@ export function MapView() {
     <Fragment>
       {isLoaded && (
         <GoogleMap
-          onLoad={onLoad}
           mapContainerStyle={{ width: '100%', height: '91vh' }}
           center={center}
-          zoom={5}
+          zoom={17}
           options={{
             zoomControl: false,
             mapTypeControl: false,
@@ -99,7 +93,6 @@ export function MapView() {
           ))}
         </GoogleMap>
       )}
-
       <Modal />
     </Fragment>
   )
