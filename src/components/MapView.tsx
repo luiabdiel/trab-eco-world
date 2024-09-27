@@ -48,7 +48,7 @@ export function MapView() {
         <div className="relative w-full rounded bg-white p-5 sm:max-w-[425px]">
           <button
             onClick={closeModal}
-            className="p- absolute right-1 top-1 rounded p-2 hover:bg-slate-200"
+            className="p- absolute right-1 top-1 rounded p-2 transition-colors hover:bg-slate-200"
           >
             <IoMdClose size={24} />
           </button>
