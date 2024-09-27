@@ -8,7 +8,7 @@ type Props = {
 
 export function GridContainer({ children, className }: Props) {
   return (
-    <div className={twMerge('max-w-container mx-auto w-full px-3', className)}>
+    <div className={twMerge('mx-auto w-full max-w-container px-3', className)}>
       {children}
     </div>
   )
