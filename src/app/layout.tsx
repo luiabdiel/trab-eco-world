@@ -1,8 +1,7 @@
 import { Poppins } from 'next/font/google'
-
 import type { Metadata } from 'next'
-import './globals.css'
 import { Header } from '@/components'
+import './globals.css'
 
 const poppins = Poppins({
   weight: ['400', '600'],
@@ -22,7 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        <Header /> {children}
+        <Header />
+        {children}
       </body>
     </html>
   )

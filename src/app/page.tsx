@@ -1,11 +1,13 @@
 'use client'
 
-import React from 'react'
+import { SectionHero, SectionInfos } from '@/components'
+import React, { Fragment } from 'react'
 
 export default function Home() {
   return (
-    <div>
-      <p>Home</p>
-    </div>
+    <Fragment>
+      <SectionHero />
+      <SectionInfos />
+    </Fragment>
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useState } from 'react'
+import { Fragment, useCallback, useState } from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import { createPortal } from 'react-dom'
 import { IoMdClose } from 'react-icons/io'
@@ -65,13 +65,13 @@ export function MapView() {
   }
 
   return (
-    <>
+    <Fragment>
       {isLoaded && (
         <GoogleMap
           onLoad={onLoad}
           mapContainerStyle={{ width: '100%', height: '91vh' }}
           center={center}
-          zoom={10}
+          zoom={5}
           options={{
             zoomControl: false,
             mapTypeControl: false,
@@ -101,6 +101,6 @@ export function MapView() {
       )}
 
       <Modal />
-    </>
+    </Fragment>
   )
 }
