@@ -10,7 +10,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Eco World',
-  description: '',
+  description:
+    'O objetivo principal deste projeto é criar uma plataforma de mapeamento de lixeiras que visa sensibilizar a população sobre a importância da destinação correta de resíduos sólidos',
 }
 
 export default function RootLayout({
